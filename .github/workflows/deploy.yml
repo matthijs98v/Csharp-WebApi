@@ -41,7 +41,7 @@ jobs:
 
         - name: Deploy via rsync
           run: |
-            rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 22" -r ./src/ $UPLOAD_PATH --delete
+            rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 22" -r . $UPLOAD_PATH --delete
 
         - name: Build image and restart docker image
           run: ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p 22 $VPS "cd $DOCKER_COMPOSE_PATH && docker compose build && docker compose up -d"
