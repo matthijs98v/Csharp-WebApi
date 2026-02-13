@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EfTest.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class HashController : ControllerBase
     {

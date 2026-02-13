@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EfTest.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class TodoController : ControllerBase
     {
