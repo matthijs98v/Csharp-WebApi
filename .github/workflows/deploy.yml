@@ -16,7 +16,7 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                 name: project
-                path: /*
+                path: .
     deploy:
       runs-on: self-hosted
       needs: build
