@@ -1,0 +1,41 @@
+@EfTest_HostAddress = http://localhost:5134
+
+GET {{EfTest_HostAddress}}/todo/
+Accept: application/json
+###
+
+GET {{EfTest_HostAddress}}/todo/1
+Accept: application/json
+###
+
+POST {{EfTest_HostAddress}}/todo/
+Accept: application/json
+Content-Type: application/json
+
+{
+    "Title" : "Test todo item"
+}
+###
+
+PUT {{EfTest_HostAddress}}/todo/1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "done" : true
+}
+###
+
+DELETE {{EfTest_HostAddress}}/todo/7
+Accept: application/json
+###
+
+Get {{EfTest_HostAddress}}/hash
+Accept: application/json
+Content-Type: application/json
+
+{
+    "password1" : "HelloWorld1",
+    "password2" : "HelloWorld1"
+}
+###
